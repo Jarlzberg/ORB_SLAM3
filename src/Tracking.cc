@@ -532,6 +532,8 @@ Tracking::~Tracking()
 
 }
 
+
+
 void Tracking::newParameterLoader(Settings *settings) {
     mpCamera = settings->camera1();
     mpCamera = mpAtlas->AddCamera(mpCamera);
@@ -1733,6 +1735,8 @@ void Tracking::PreintegrateIMU()
 
     //Verbose::PrintMess("Preintegration is finished!! ", Verbose::VERBOSITY_DEBUG);
 }
+
+
 
 
 bool Tracking::PredictStateIMU()
@@ -4063,6 +4067,10 @@ int Tracking::GetNumberDataset()
 int Tracking::GetMatchesInliers()
 {
     return mnMatchesInliers;
+}
+
+int Tracking::getTrackingState() {
+    return mState;
 }
 
 void Tracking::SaveSubTrajectory(string strNameFile_frames, string strNameFile_kf, string strFolder)

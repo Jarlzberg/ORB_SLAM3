@@ -474,6 +474,10 @@ Sophus::SE3f System::TrackMonocular(const cv::Mat &im, const double &timestamp, 
 }
 
 
+int System::getTrackingState() {
+    return mpTracker->getTrackingState();
+}
+
 
 void System::ActivateLocalizationMode()
 {

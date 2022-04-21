@@ -81,6 +81,9 @@ public:
     void SetStepByStep(bool bSet);
     bool GetStepByStep();
 
+    // jabadabado
+    int getTrackingState();
+
     // Load new settings
     // The focal lenght should be similar or scale prediction will fail when projecting points
     void ChangeCalibration(const string &strSettingPath);
@@ -228,6 +231,9 @@ protected:
 
     // Reset IMU biases and compute frame velocity
     void ResetFrameIMU();
+
+
+    
 
     bool mbMapUpdated;
 
